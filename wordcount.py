@@ -1,9 +1,12 @@
 # put your code here.
-filename = open('twain.txt')
 
-words_in_file = {}
 
-def word_strip(file):
+
+def word_strip(filename):
+
+    filename = open(filename)
+    words_in_file = {}
+
     for line in filename:
         line = line.rstrip()
         words = line.split(' ')
@@ -14,7 +17,8 @@ def word_strip(file):
             else:
                 words_in_file[word] += 1
 
-word_strip(filename)
+
+return word_strip(filename)
 #print words_in_file
 
 for key in words_in_file:
